@@ -1,0 +1,9 @@
+.idea
+node_modules
+dist
+.vscode
+#Temprorary files of VIM
+*.swp
+*/.idea
+cs.log
+cs-audit.log
