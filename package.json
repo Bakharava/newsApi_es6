@@ -1,0 +1,14 @@
+{
+  "name": "newsApi_es6",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bystrova/newsApi_es6.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+
+  }
+}
