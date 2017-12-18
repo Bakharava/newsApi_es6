@@ -1,0 +1,114 @@
+@import './color';
+@import './media';
+
+//==== font settings ==========================================================
+$font-spare: Arial, sans-serif;
+$font-default: 'Oswald',$font-spare;
+$font-added: 'Source Sans Pro',$font-spare;
+$font-icon:"FontAwesome";
+$font-size-base: 12px;
+
+$font-size-xxl: floor(( $font-size-base * 3.18  ));  // 38px = 12 * 3.16
+$font-size-xl:  floor(( $font-size-base * 2.5   ));  // 30px = 12 * 2.5
+$font-size-lg:  floor(( $font-size-base * 2     ));  // 24px = 12 * 2
+$font-size-md:  floor(( $font-size-base * 1.5   ));  // 18px = 12 * 1.5
+$font-size-sm:  floor(( $font-size-base * 1.33  ));  // 16px = 12 * 1.33
+$font-size-xs:  floor(( $font-size-base * 1.18  ));  // 14px = 12 * 1.16
+$font-size-ss:  floor(( $font-size-base * 1     ));  // 12px = 12 * 1
+
+//=============================================================================
+
+
+//==== base size settings =====================================================
+/*$max-width: $media-desktop-lg;*/
+//values for width
+$width-lg: 960px;
+$width-md: 720px;
+$width-sm: 480px;
+$width-xs: 320px;
+
+$base-colomn-width: 60px;
+$base-colomn-margin: 10px;
+
+$base-padding-lg: 24px;
+$base-padding-sm: 18px;
+$base-padding-xs: 12px;
+$base-padding-ss: 6px;
+$base-padding-sss: 3px;
+
+$base-height-xxxl:96px;
+$base-height-xxl:64px;
+$base-height-xl:60px;
+$base-height-lg:48px;
+$base-height-md:36px;
+$base-height-sm:28px;
+$base-height-xs:24px;
+$base-height-xss:18px;
+$base-height-ss:16px;
+$base-height-sss:12px;
+//=============================================================================
+
+
+//==== base color setting =====================================================
+
+
+//primary basic color
+$component-base-basic-blue:$color-basic-blue;
+$component-base-additional-lime-color:$color-basic-lime-green;
+$component-base-dark-grey:$color-basic-dark-grey;
+$component-base-background: $color-basic-white;
+
+//second basic color
+$component-base-raspberry:$color-basic-raspberry;
+$component-base-plum:$color-basic-plum;
+$component-base-dark-blue: $color-basic-dark-blue;
+$component-base-additional-button-background: $color-basic-dark-green;
+$component-base-additional-text-color: $color-basic-medium-gray;
+$component-base-additional-light-gray-color:$color-basic-grey;
+$component-base-additional-gray-color:$color-basic-light-gray;
+
+//additional colors
+$component-base-yellow:$color-additional-yellow;
+$component-base-orange:$color-additional-orange;
+$component-base-additional-red-color:$color-additional-red;
+$component-base-fuchsia:$color-additional-fuchsia;
+$component-base-text-color: $color-additional-black;
+$component-base-violet:$color-additional-violet;
+$component-base-additional-background-light: $color-additional-bg-grey;
+$component-base-additional-background-dark: $color-additional-dark-bg-grey;
+
+//light-green dark-green white
+$component-base-button-background: $color-basic-lime-green;
+$component-base-button-text-collor: $color-basic-white;
+$component-base-invalid-input-collor: $color-additional-red;
+
+
+
+//====button-variables=========================================
+$component-button-padding-vertical: 10px;
+$component-button-padding-horizontal: 10px;
+
+$component-button-text-color-light: $color-basic-white;
+$component-button-text-color-dark: $color-basic-medium-gray;
+
+$component-button-light-green:$color-basic-lime-green;
+$component-button-background-gray:$color-basic-light-gray;
+$component-button-background-white:$color-basic-white;
+$component-button-background-red:$color-basic-raspberry;
+$component-button-background-light-green:$color-basic-dark-green;
+$component-button-background-blue:$color-basic-blue;
+
+$component-button-border-cancel:$color-basic-light-gray;
+//====form-components-variables=========================================
+
+$component-form-components-font-size:$font-size-sm;
+$component-form-base-width: 60px;
+$component-form-base-margin: 10px;
+
+$component-input-height-sm:36px;
+$component-input-padding-horizontal: 10px;
+$component-input-padding-vertical: 5px;
+
+$component-label-required-color:$color-basic-raspberry;
+
+//====label-variables=========================================

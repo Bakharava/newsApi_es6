@@ -2,17 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="news.css" rel="stylesheet">
+    <link href="../dist/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/font-oswald/css/font-oswald.css">
+    <link rel="stylesheet" href="./assets/fonts/font-sourcesanspro/css/font-sourcesanspro.css">
     <title>My news API</title>
 </head>
 <body>
 <div class="main-container">
     <div class="header-container">
-        <div class="header">Header</div>
-        <div class="sub-header"></div>
+        <div class="header">
+            <div class="header__link">
+                <div class="header__logo">logo</div>
+                <div class="header__link-news">
+                    <a class="fa fa-home link-home"></a>
+                    <a>politic</a>
+                    <a>sports</a>
+                    <a>art</a>
+                    <a>society</a>
+                    <a> in world</a>
+                </div>
+                <div class="header__link-social">
+                    <a class="fa fa-search" target="_self"></a>
+                    <a class="fa fa-twitter" href="https://www.twitter.com/" target="_blank"></a>
+                    <a class="fa fa-pinterest" href="https://www.pinterest.com/" target="_blank"></a>
+                    <a class="fa fa-facebook" href="https://www.facebook.com/" target="_blank"></a>
+                    <a class="fa fa-instagram" href="https://www.instagram.com/" target="_blank"></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="sub-header">
+            <div class="sub-header__title">Hot<b>News</b></div>
+            <div>the freshest, the hottest</div>
+        </div>
     </div>
-    <div class="body">Body</div>
-    <div class="footer">Footer</div>
+    <div class="body">
+        <div class="body__wrapper">
+            <div class="body__latest-news">
+                <div class="body__latest-news-text">Latest posts</div>
+            </div>
+            <div class="body__news-posts">
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__content">&#169 2017 Awesome news source</div>
+    </div>
 </div>
+<script type="text/javascript" src="../dist/bundle.js"></script>
 </body>
 </html>
