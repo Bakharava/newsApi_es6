@@ -94,22 +94,34 @@ body {
     flex: 1 0 auto;
     .body__wrapper {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       width: 80%;
-      margin-top: 30px;
-      .body__latest-news {
+
+      .body__news {
         display: flex;
-        width: 100%;
-        border-bottom: 2px solid $color-additional-light-blue;
-        .body__latest-news-text {
-          box-sizing: content-box;
-          padding: 12px;
-          background-color: $color-additional-light-blue;
-          color: $color-basic-white;
-          text-transform: uppercase;
-          font-size: $font-size-xs;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        margin-top: 30px;
+        .body__latest-news {
+          display: flex;
+          width: 100%;
+          border-bottom: 2px solid $color-additional-light-blue;
+          .body__latest-news-text {
+            box-sizing: content-box;
+            padding: 12px;
+            background-color: $color-additional-light-blue;
+            color: $color-basic-white;
+            text-transform: uppercase;
+            font-size: $font-size-xs;
+          }
         }
+      }
+      .body__weather {
+        width: 20%;
+        height: 80%;
+        margin-top: 30px;
+        margin-left: 10px;
+        border-left: 1px solid $color-basic-light-gray;
       }
     }
   }
