@@ -115,10 +115,50 @@ body {
             font-size: $font-size-xs;
           }
         }
+        .body__news-posts {
+          display: flex;
+          ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            li {
+              list-style-type: none;
+              div {
+                width: 250px;
+                height: 300px;
+                display: flex;
+                margin: 20px;
+                border: 1px solid $color-additional-dark-bg-grey;
+                a {
+                  text-decoration: none;
+                  color: $color-extra-black;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  font-family: $font-added;
+                  img {
+                    width: 250px;
+                    height: 180px;
+                  }
+                }
+                a + p {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                }
+              }
+            }
+
+          }
+
+
+        }
       }
       .body__weather {
         width: 20%;
-        height: 80%;
+        height: 90%;
         margin-top: 30px;
         margin-left: 10px;
         border-left: 1px solid $color-basic-light-gray;
