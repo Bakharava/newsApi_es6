@@ -37,7 +37,7 @@ body {
         .header__link-news {
           display: flex;
           flex-basis: 60%;
-          justify-content: center;
+          justify-content: flex-end;
           a {
             margin: 0 10px;
             text-decoration: none;
@@ -117,6 +117,7 @@ body {
         }
         .body__news-posts {
           display: flex;
+          margin-top: 20px;
           ul{
             display: flex;
             flex-wrap: wrap;
