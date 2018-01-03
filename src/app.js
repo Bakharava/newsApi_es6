@@ -40,7 +40,7 @@ const newsList = (listDiv, news) => {
                                 <img src=${item.urlToImage} alt=${item.title}>
                                 <p>
                                     <p>${item.title ? item.title : " "}</p>
-                                    <p>${item.publishedAt ? item.publishedAt : " "}</p>
+                                    <p class="news-time">${item.publishedAt ? item.publishedAt.replace(/T/g, ' ').replace(/Z/g, ' ') : " "}</p>
                                 </p>
                             </a>
                         </div>`

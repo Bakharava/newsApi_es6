@@ -136,9 +136,14 @@ body {
                   flex-direction: column;
                   justify-content: space-between;
                   font-family: $font-added;
+                  font-weight: 600;
                   img {
                     width: 250px;
                     height: 180px;
+                  }
+                  .news-time {
+                    font-weight: 400;
+                    color: $color-additional-light-blue;
                   }
                 }
                 a + p {
@@ -148,6 +153,7 @@ body {
                   flex-direction: column;
                   justify-content: space-between;
                 }
+
               }
             }
 
@@ -158,10 +164,10 @@ body {
       }
       .body__weather {
         width: 20%;
-        height: 90%;
+        height: 98%;
         margin-top: 30px;
         margin-left: 10px;
-        border-left: 1px solid $color-basic-light-gray;
+        border-left: 2px solid $color-basic-light-gray;
       }
     }
   }
