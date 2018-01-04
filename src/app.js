@@ -3,20 +3,37 @@ import 'whatwg-fetch';
 
 let newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge' ;
 const apiKey = 'b8d411a4e22745308fab1a665115c094';
-const newsUrl = `https://newsapi.org/v2/${newsUrlParam}&apiKey=`;
+
 
 //const newsUrl = 'https://newsapi.org/v2/top-headlines?category=sport&language=en&apiKey=';
 
+const getNewsUrl = (e) => {
+    e = e || window.event;
+    e = e.target || e.srcElement;
+    if (e.id === "1") {
+        console.log(e.id);
+         newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge';
+
+    } else  if (e.id === "2") {
+        console.log(e.id);
+         newsUrlParam = 'top-headlines?category=sport&language=en'
+    }
+    else  if (e.id === "3") {
+        console.log(e.id);
+         newsUrlParam = 'top-headlines?category=music&language=en'
+    }
+    else  if (e.id === "4") {
+        console.log(e.id);
+         newsUrlParam = 'top-headlines?category=business&language=en'
+    }
+    getNews();
+};
+document.querySelector('.header__link-news').addEventListener ("click", getNewsUrl, false);
+
 let getWrapperForNews = document.querySelector('.body__news-posts');
 
-const getNewsUrl = () => {
-        console.log(event.target.text)
-}
-const getCommonNewsUrl = () => {
-    return newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge'
-};
-
 const getNews = () => {
+    const newsUrl = `https://newsapi.org/v2/${newsUrlParam}&apiKey=`;
     fetch(`${newsUrl}${apiKey}`)
         .then(res => {
             return res.json();

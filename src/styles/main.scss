@@ -128,7 +128,7 @@ body {
                 width: 250px;
                 height: 300px;
                 display: flex;
-                margin: 20px;
+                margin: 20px 30px 20px 10px;
                 border: 1px solid $color-additional-dark-bg-grey;
                 a {
                   text-decoration: none;
@@ -147,7 +147,7 @@ body {
                     color: $color-additional-light-blue;
                   }
                 }
-                a + p {
+                a > p {
                   overflow: hidden;
                   text-overflow: ellipsis;
                   display: flex;
@@ -164,9 +164,11 @@ body {
         }
       }
       .body__weather {
+        display: flex;
+        justify-content: flex-end;
         width: 20%;
         height: 98%;
-        margin-top: 30px;
+        margin-top: 70px;
         margin-left: 10px;
         border-left: 2px solid $color-basic-light-gray;
       }
