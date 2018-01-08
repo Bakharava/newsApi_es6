@@ -54,13 +54,13 @@ const newsList = (listDiv, news) => {
         let li = document.createElement('li');
         li.innerHTML = `<div >
                             <a href=${item.url} target="_blank">
-                                <img src=${item.urlToImage} alt=${item.title}>
-                                <p>
-                                    <p>${item.title ? item.title : " "}</p>
-                                    <p class="news-time">${item.publishedAt ? item.publishedAt.replace(/T/g, ' ').replace(/Z/g, ' ') : " "}</p>
-                                </p>
+                                <img src=${item.urlToImage} alt=${item.title}> 
+                               
+                                    <textarea rows="4" readonly>${item.title ? item.title : " "}</textarea>
+                                    <p class="news-time">${item.publishedAt ? item.publishedAt.replace(/[\T\Z]/g, ' ') : " "}</p>
+                                
                             </a>
-                        </div>`
+                        </div>`;
         ul.append(li)
     });
     console.log(ul);
