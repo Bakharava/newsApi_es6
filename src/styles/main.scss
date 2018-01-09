@@ -43,6 +43,9 @@ body {
             text-decoration: none;
             cursor: pointer;
           }
+          a:hover {
+            opacity: 0.7;
+          }
           .link-home {
             display: flex;
             align-items: center;
@@ -59,6 +62,9 @@ body {
             color: $color-basic-white;
             text-decoration: none;
             cursor: pointer;
+          }
+          a:hover {
+            opacity: 0.7;
           }
         }
       }
@@ -118,6 +124,7 @@ body {
         .body__news-posts {
           display: flex;
           margin-top: 20px;
+          min-height: 700px;
           ul{
             display: flex;
             flex-wrap: wrap;
@@ -169,6 +176,11 @@ body {
           }
 
 
+        }
+        .pagination {
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
       }
       .body__weather {
