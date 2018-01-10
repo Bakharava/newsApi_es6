@@ -84,7 +84,7 @@ body {
               cursor: text;
               color: $color-basic-white;
             }
-            input::-webkit-search-cancel-button {
+            input::-webkit-search-cancel-button, input::-webkit-search-decoration {
               display: none;
             }
             input:-moz-placeholder {
