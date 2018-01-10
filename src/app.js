@@ -15,8 +15,6 @@ const getNewsUrl = (e) => {
     if (e.id === "1") {
         console.log(e.id);
          newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge';
-        searchNewsParam = '';
-
     } else  if (e.id === "2") {
         console.log(e.id);
          newsUrlParam = 'top-headlines?category=sport&language=en'
@@ -31,7 +29,8 @@ const getNewsUrl = (e) => {
     }
 
     getNews();
-    searchNewsParam = ''
+    let searchInput = document.querySelector('input');
+    searchInput.value = '';
 };
 document.querySelector('.header__link-news').addEventListener ("click", getNewsUrl, false);
 
@@ -76,8 +75,8 @@ const getSearchNews = () => {
     searchNewsParam = searchInput.value;
     newsUrlParam = `everything?q=${searchNewsParam}`;
     getNews();
-    searchNewsParam = ''
-}
+};
+
 document.querySelector('.search-news').addEventListener ("keyup", getSearchNews, false);
 
 window.onload = getNews();
