@@ -63,7 +63,8 @@ body {
               outline: none;
             }
             input[type=search] {
-              background: $color-additional-light-blue url(../assets/icon/search-icon.png) no-repeat 4px center;;
+              background: $color-additional-light-blue url(../assets/icon/search.png) no-repeat 4px center;
+              background-size: 14px;
               border: solid 1px $color-basic-white;
               width: 25px;
               height: 25px;
@@ -81,7 +82,7 @@ body {
             }
             input[type=search]:focus {
               width: 130px;
-              padding-left: 25px;
+              padding-left: 23px;
               cursor: text;
               color: $color-basic-white;
             }
