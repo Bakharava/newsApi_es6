@@ -38,6 +38,7 @@ body {
           display: flex;
           flex-basis: 60%;
           justify-content: flex-end;
+          align-items: center;
           a {
             margin: 0 10px;
             text-decoration: none;
@@ -62,10 +63,10 @@ body {
               outline: none;
             }
             input[type=search] {
-              background: $color-additional-light-blue url(../assets/icon/search-icon.png) no-repeat 5px center;;
+              background: $color-additional-light-blue url(../assets/icon/search-icon.png) no-repeat 4px center;;
               border: solid 1px $color-basic-white;
-              width: 27px;
-              height: 27px;
+              width: 25px;
+              height: 25px;
               padding-left: 10px;
               cursor: pointer;
               content: '\f002';
