@@ -3,6 +3,7 @@ import 'whatwg-fetch';
 
 let newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge' ;
 const apiKey = 'b8d411a4e22745308fab1a665115c094';
+let searchNewsParam = '';
 
 let getWrapperForNews = document.querySelector('.body__news-posts');
 
@@ -14,6 +15,7 @@ const getNewsUrl = (e) => {
     if (e.id === "1") {
         console.log(e.id);
          newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge';
+        searchNewsParam = '';
 
     } else  if (e.id === "2") {
         console.log(e.id);
@@ -29,6 +31,7 @@ const getNewsUrl = (e) => {
     }
 
     getNews();
+    searchNewsParam = ''
 };
 document.querySelector('.header__link-news').addEventListener ("click", getNewsUrl, false);
 
@@ -66,6 +69,16 @@ const newsList = (listDiv, news) => {
     console.log(ul);
     listDiv.append(ul)
 };
+const getSearchNews = () => {
+    let deletingElem = document.querySelector('ul');
+    deletingElem.remove();
+    let searchInput = document.querySelector('input');
+    searchNewsParam = searchInput.value;
+    newsUrlParam = `everything?q=${searchNewsParam}`;
+    getNews();
+    searchNewsParam = ''
+}
+document.querySelector('.search-news').addEventListener ("keyup", getSearchNews, false);
 
 window.onload = getNews();
 console.log('App is ran');
