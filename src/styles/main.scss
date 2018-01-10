@@ -55,9 +55,47 @@ body {
           flex-basis: 20%;
           display: flex;
           justify-content: flex-end;
+          align-items: center;
+          .search-news {
+
+            input {
+              outline: none;
+            }
+            input[type=search] {
+              background: $color-additional-light-blue url(../assets/icon/search-icon.png) no-repeat 5px center;;
+              border: solid 1px $color-basic-white;
+              width: 27px;
+              height: 27px;
+              padding-left: 10px;
+              cursor: pointer;
+              content: '\f002';
+              color: transparent;
+              -webkit-border-radius: 10em;
+              -moz-border-radius: 10em;
+              border-radius: 10em;
+
+              -webkit-transition: all .5s;
+              -moz-transition: all .5s;
+              transition: all .5s;
+            }
+            input[type=search]:focus {
+              width: 130px;
+              padding-left: 25px;
+              cursor: text;
+              color: $color-basic-white;
+            }
+            input::-webkit-search-cancel-button {
+              display: none;
+            }
+            input:-moz-placeholder {
+              color: transparent;
+            }
+            input::-webkit-input-placeholder {
+              color: transparent;
+            }
+          }
           a {
             width: 10px;
-            height: 10px;
             margin-left: 30px;
             color: $color-basic-white;
             text-decoration: none;
