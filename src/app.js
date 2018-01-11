@@ -17,15 +17,15 @@ const getNewsUrl = (e) => {
          newsUrlParam = 'top-headlines?sources=bbc-news,the-next-web,the-verge';
     } else  if (e.id === "2") {
         console.log(e.id);
-         newsUrlParam = 'top-headlines?category=sport&language=en'
+         newsUrlParam = 'top-headlines?category=sport';
     }
     else  if (e.id === "3") {
         console.log(e.id);
-         newsUrlParam = 'top-headlines?category=music&language=en'
+         newsUrlParam = 'top-headlines?category=music';
     }
     else  if (e.id === "4") {
         console.log(e.id);
-         newsUrlParam = 'top-headlines?category=business&language=en'
+         newsUrlParam = 'top-headlines?category=business';
     }
 
     getNews();
@@ -35,7 +35,7 @@ const getNewsUrl = (e) => {
 document.querySelector('.header__link-news').addEventListener ("click", getNewsUrl, false);
 
 const getNews = () => {
-    const newsUrl = `https://newsapi.org/v2/${newsUrlParam}&apiKey=`;
+    const newsUrl = `https://newsapi.org/v2/${newsUrlParam}&language=en&apiKey=`;
     fetch(`${newsUrl}${apiKey}`)
         .then(res => {
             return res.json();
