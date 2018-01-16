@@ -1,10 +1,8 @@
-@import './color';
-@import './media';
-
 //==== font settings ==========================================================
 $font-spare: Arial, sans-serif;
-$font-default: 'Oswald',$font-spare;
-$font-added: 'Source Sans Pro',$font-spare;
+$font-default: 'Oswald', $font-spare;
+$font-additional: 'Oswald Regular', $font-spare;
+$font-added: 'Source Sans Pro', $font-spare;
 $font-icon:"FontAwesome";
 $font-size-base: 12px;
 
@@ -13,102 +11,116 @@ $font-size-xl:  floor(( $font-size-base * 2.5   ));  // 30px = 12 * 2.5
 $font-size-lg:  floor(( $font-size-base * 2     ));  // 24px = 12 * 2
 $font-size-md:  floor(( $font-size-base * 1.5   ));  // 18px = 12 * 1.5
 $font-size-sm:  floor(( $font-size-base * 1.33  ));  // 16px = 12 * 1.33
-$font-size-xs:  floor(( $font-size-base * 1.18  ));  // 14px = 12 * 1.16
+$font-size-xs:  floor(( $font-size-base * 1.18  ));  // 14px = 12 * 1.18
 $font-size-ss:  floor(( $font-size-base * 1     ));  // 12px = 12 * 1
+$font-size-sss: floor(( $font-size-base * 0.83  ));  // 10px = 12 * 0.83
 
 //=============================================================================
 
-
 //==== base size settings =====================================================
-/*$max-width: $media-desktop-lg;*/
-//values for width
-$width-lg: 960px;
-$width-md: 720px;
-$width-sm: 480px;
-$width-xs: 320px;
 
-$base-colomn-width: 60px;
-$base-colomn-margin: 10px;
+//values for padding
+
+$base-padding: 10px;
 
 $base-padding-lg: 24px;
 $base-padding-sm: 18px;
 $base-padding-xs: 12px;
+$base-padding-xss: 9px;
 $base-padding-ss: 6px;
 $base-padding-sss: 3px;
 
-$base-height-xxxl:96px;
-$base-height-xxl:64px;
-$base-height-xl:60px;
-$base-height-lg:48px;
-$base-height-md:36px;
-$base-height-sm:28px;
-$base-height-xs:24px;
-$base-height-xss:18px;
-$base-height-ss:16px;
-$base-height-sss:12px;
+$added-padding-ss: 7px;
+$added-padding-sss: 5px;
+
+//values for margin
+
+$base-margin: 10px;
+
+$base-margin-lg: 24px;
+$base-margin-sm: 18px;
+$base-margin-xs: 12px;
+$base-margin-xss: 9px;
+$base-margin-ss: 6px;
+$base-margin-sss: 3px;
+
+$added-margin-ss: 7px;
+$added-margin-sss: 5px;
+
+//values for width
+$base-width: 10px;
+
+$base-width-xl: 60px;
+$base-width-sm: 28px;
+$base-width-xs: 24px;
+$base-width-xss: 18px;
+$base-width-ss: 16px;
+$base-width-sss: 12px;
+
+
+$width-xlg: 1660px;
+$width-lg: 552px;
+$width-md: 720px;
+$width-sm: 286px;
+$width-xss: 208px;
+$width-ss: 184px;
+$width-sss: 100px;
+
+$added-width-xs: 194px;
+
+//values for height
+
+$base-height: 10px;
+
+$height-lg: 552px;
+$height-md: 540px;
+$height-ss: 163px;
+$height-sss: 100px;
+
+$base-height-xxxl: 96px;
+$base-height-xxl: 64px;
+$base-height-xl: 60px;
+$base-height-lg: 48px;
+$base-height-md: 36px;
+$base-height-sm: 28px;
+$base-height-xs: 24px;
+$base-height-xss: 18px;
+$base-height-ss: 16px;
+$base-height-sss: 12px;
+
+//values for line-height
+
+$base-line-height-md: 29px;
+$base-line-height-sm: 26px;
+$base-line-height-xs: 24px;
+$base-line-height-xss: 19px;
+$base-line-height-ss: 18px;
+$base-line-height-sss: 16px;
+
 //=============================================================================
 
+//values for shift (left/right/top/bottom)
 
-//==== base color setting =====================================================
+$base-shift: 10px;
 
+//values for input
+$base-input-height-sm: 30px;
+$base-input-height-xs: 23px;
+$base-input-height-xss: 22px;
 
-//primary basic color
-$component-base-basic-blue:$color-basic-blue;
-$component-base-additional-lime-color:$color-basic-lime-green;
-$component-base-dark-grey:$color-basic-dark-grey;
-$component-base-background: $color-basic-white;
+$base-input-width-sm: 188px;
+$base-input-width-xss: 181px;
+$base-input-width-ss: 23px;
+$base-input-width-sss: 19px;
 
-//second basic color
-$component-base-raspberry:$color-basic-raspberry;
-$component-base-plum:$color-basic-plum;
-$component-base-dark-blue: $color-basic-dark-blue;
-$component-base-additional-button-background: $color-basic-dark-green;
-$component-base-additional-text-color: $color-basic-medium-gray;
-$component-base-additional-light-gray-color:$color-basic-grey;
-$component-base-additional-gray-color:$color-basic-light-gray;
+//values for button
+$base-button-height-sm: 36px;
+$base-button-width-sm: 78px;
 
-//additional colors
-$component-base-yellow:$color-additional-yellow;
-$component-base-orange:$color-additional-orange;
-$component-base-additional-red-color:$color-additional-red;
-$component-base-fuchsia:$color-additional-fuchsia;
-$component-base-text-color: $color-additional-black;
-$component-base-violet:$color-additional-violet;
-$component-base-additional-background-light: $color-additional-bg-grey;
-$component-base-additional-background-dark: $color-additional-dark-bg-grey;
-
-//light-green dark-green white
-$component-base-button-background: $color-basic-lime-green;
-$component-base-button-text-collor: $color-basic-white;
-$component-base-invalid-input-collor: $color-additional-red;
-
-
-
-//====button-variables=========================================
-$component-button-padding-vertical: 10px;
-$component-button-padding-horizontal: 10px;
-
-$component-button-text-color-light: $color-basic-white;
-$component-button-text-color-dark: $color-basic-medium-gray;
-
-$component-button-light-green:$color-basic-lime-green;
-$component-button-background-gray:$color-basic-light-gray;
-$component-button-background-white:$color-basic-white;
-$component-button-background-red:$color-basic-raspberry;
-$component-button-background-light-green:$color-basic-dark-green;
-$component-button-background-blue:$color-basic-blue;
-
-$component-button-border-cancel:$color-basic-light-gray;
-//====form-components-variables=========================================
-
-$component-form-components-font-size:$font-size-sm;
-$component-form-base-width: 60px;
-$component-form-base-margin: 10px;
-
-$component-input-height-sm:36px;
-$component-input-padding-horizontal: 10px;
-$component-input-padding-vertical: 5px;
-
-$component-label-required-color:$color-basic-raspberry;
-
-//====label-variables=========================================
+//values for border
+$base-border-radius-lg: 100px;
+$base-border-radius-md: 62px;
+$base-border-radius-xs: 15px;
+$base-border-radius-xss: 12px;
+$base-border-radius-ss: 8px;
+$base-border-radius-sss: 2.5px;
