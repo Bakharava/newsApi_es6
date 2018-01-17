@@ -33,14 +33,20 @@ body {
         text-transform: uppercase;
         .header__logo {
           flex-basis: 20%;
+          @media #{$media-tablet-sm} {
+            flex-basis: 10%;
+          }
         }
         .header__link-news {
           display: flex;
           flex-basis: 60%;
           justify-content: flex-end;
           align-items: center;
+          @media #{$media-tablet-sm} {
+            flex-basis: 70%;
+          }
           a {
-            margin: 0 10px;
+            margin: 0 $base-margin;
             text-decoration: none;
             cursor: pointer;
             .active {
@@ -61,17 +67,24 @@ body {
           justify-content: flex-end;
           align-items: center;
           .search-news {
-
+            position: relative;
+            margin-left: 10px;
+            @media #{$media-desktop-lg} {
+                margin-left: 20px;
+            }
             input {
               outline: none;
             }
             input[type=search] {
+              position: absolute;
+              top: -11px;
+              right: -8px;
               background: $color-additional-light-blue url(../assets/icon/search.png) no-repeat 4px center;
               background-size: 14px;
               border: solid 1px $color-basic-white;
-              width: 25px;
-              height: 25px;
-              padding-left: 10px;
+              width: $base-width * 2.5;
+              height:$base-height * 2.5;
+              padding-left: $base-padding;
               cursor: pointer;
               content: '\f002';
               color: transparent;
@@ -84,8 +97,8 @@ body {
               transition: all .5s;
             }
             input[type=search]:focus {
-              width: 130px;
-              padding-left: 23px;
+              width: $width-sss * 1.3;
+              padding-left:$base-padding * 2.3;
               cursor: text;
               color: $color-basic-white;
             }
@@ -100,8 +113,8 @@ body {
             }
           }
           a {
-            width: 10px;
-            margin-left: 30px;
+            width: $base-width;
+            margin-left: $base-margin * 3;
             color: $color-basic-white;
             text-decoration: none;
             cursor: pointer;
@@ -120,14 +133,14 @@ body {
       justify-content: center;
       align-items: center;
       position: relative;
-      height: 200px;
+      height: $height-sss * 2;
       background: url("../assets/image/newspaper.jpeg") no-repeat;
       background-size: cover;
       .sub-header__title {
         color: $color-basic-white;
         width: 80%;
         font-family: $font-added;
-        font-size: 42px;
+        font-size: $font-size-base * 3.5;
         text-shadow: 1px 1px 2px black, 0 0 1em $color-basic-white;
       }
       div {
@@ -149,15 +162,18 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 80%;
-        margin-top: 30px;
+       width: 80%;
+        @media #{$media-tablet-md} {
+          width: 70%;
+        }
+        margin-top: $base-margin * 3;
         .body__latest-news {
           display: flex;
           width: 100%;
           border-bottom: 2px solid $color-additional-light-blue;
           .body__latest-news-text {
             box-sizing: content-box;
-            padding: 12px;
+            padding: $base-padding-xs;
             background-color: $color-additional-light-blue;
             color: $color-basic-white;
             text-transform: uppercase;
@@ -166,8 +182,8 @@ body {
         }
         .body__news-posts {
           display: flex;
-          margin-top: 20px;
-          min-height: 700px;
+          margin-top: $base-margin * 2;
+          min-height: $height-sss * 7;
           ul {
             display: flex;
             flex-wrap: wrap;
@@ -175,10 +191,10 @@ body {
             li {
               list-style-type: none;
               div {
-                width: 250px;
-                height: 300px;
+                width: $width-sm;
+                height: $height-sss * 3;
                 display: flex;
-                margin: 20px 30px 20px 10px;
+                margin: $base-margin*2 $base-margin*3 $base-margin*2 $base-margin;
                 border: 1px solid $color-additional-dark-bg-grey;
                 a {
                   text-decoration: none;
@@ -186,14 +202,14 @@ body {
                   flex-direction: column;
                   justify-content: space-between;
                   img {
-                    width: 250px;
+                    width: $width-sm;
                     flex-basis: 50%;
                     max-height: 180px;
                   }
                   .news-time {
                     font-weight: 400;
                     color: $color-additional-light-blue;
-                    margin-left: 5px;
+                    margin-left: $base-margin * 0.5;
                     flex-basis: 10%;
                   }
                 }
@@ -202,8 +218,8 @@ body {
                   font-weight: 600;
                   font-size: $font-size-sm;
                   // height: 25%;
-                  margin-top: 10px;
-                  margin-left: 5px;
+                  margin-top: $base-margin;
+                  margin-left: $base-margin *0.5;
                   //  flex-basis: 30%;
                   outline: none;
                   cursor: pointer;
@@ -223,13 +239,13 @@ body {
           width: 100%;
           display: flex;
           justify-content: center;
-          margin-bottom: 10px;
+          margin-bottom: $base-margin;
           div {
             display: flex;
           }
           a {
-            width: 25px;
-            height: 30px;
+            width: $base-width * 2.5;
+            height: $base-height * 3;
             text-decoration: none;
             display: flex;
             justify-content: center;
@@ -251,9 +267,12 @@ body {
         justify-content: flex-end;
         width: 20%;
         height: 98%;
-        margin-top: 70px;
-        margin-left: 10px;
+        margin-top: $base-margin * 7;
+        margin-left: $base-margin;
         border-left: 2px solid $color-basic-light-gray;
+        @media #{$media-tablet-md} {
+          width: 30%;
+        }
       }
     }
   }
@@ -263,7 +282,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: $color-basic-grey;
-    height: 60px;
+    height: $base-height-xl;
     flex: 0 0 auto;
     .footer__content {
       color: $color-basic-white;
@@ -274,3 +293,4 @@ body {
     opacity: 0.7;
   }
 }
+

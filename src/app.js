@@ -102,11 +102,11 @@ const createPagination = (listPages, pages) => {
     div.className = 'wrapperForPage';
     let qoutL = document.createElement('a');
     qoutL.className="qoutL";
-    qoutL.setAttribute('href', '#')
+    qoutL.setAttribute('href', '#');
     qoutL.innerHTML = '&laquo;';
     let qoutR = document.createElement('a');
     qoutR.className="qoutR";
-    qoutR.setAttribute('href', '#')
+    qoutR.setAttribute('href', '#');
     qoutR.innerHTML = '&laquo;';
     qoutR.innerHTML ='&raquo;';
     let arr = [];
